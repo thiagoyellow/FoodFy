@@ -15,8 +15,9 @@
 
     {% block content %} {% endblock %}
 
-   <section class="cards">
 
+    <section class="cards">
+       
         {% for item in items %}
             <div class="card" id="{{item.id}}">
                 <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/{{item.image}}" alt="Imagem de {{item.title}}">

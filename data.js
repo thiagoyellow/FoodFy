@@ -1,4 +1,5 @@
 module.exports = [
+
     {
       id: "burger",
       image: 'burger.png',
@@ -23,6 +24,7 @@ module.exports = [
       ],
       information: "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \n\n Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface."
     },
+    
     {
       id: "pizzza",
       image: 'pizza.png',
@@ -51,6 +53,7 @@ module.exports = [
       ],
       information: 'Pizza de liquidificador é uma receita deliciosa e supersimples de preparar. Feita toda no liquidificador, ela é bem prática para o dia a dia. Aqui no TudoGostoso você também encontra diversas delícias práticas feitas no liquidificador: massa de panqueca, torta de frango de liquidificador, pão de queijo de liquidificador, bolo de banana, bolo de chocolate e muito mais!'
     },
+
     {
       id: "asinha",  
       image: 'asinha.png',
@@ -69,6 +72,7 @@ module.exports = [
       ],
       information: ''
     },
+
     {
       id: "lasanha",
       image: 'lasanha.png',
@@ -90,6 +94,7 @@ module.exports = [
       ],
       information: 'Recheie a lasanha com o que preferir.'
     },
+
     {
       id: "macarrao",
       image: 'macarrao.png',
@@ -115,6 +120,7 @@ module.exports = [
       ],
       information: 'Não lave o macarrão nem passe óleo ou gordura nele depois de escorrê-lo. Coloque direto na frigideira.'
     },
+
     {
       id: "doce",
       image: 'doce.png',
@@ -138,4 +144,5 @@ module.exports = [
       ],
       information: ''
     }
+    
   ];

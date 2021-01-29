@@ -16,6 +16,7 @@ body {
     align-items: center;
 }
 
+
 .maisAcessadas h2 {
     color: #bb341f;
     margin-top: 100px;
@@ -74,37 +75,42 @@ nav a:hover {
     line-height: 28px;
 }
 
-.cabeca {
+.BackgroundChef {
     background-color: #FBDFDB;
     max-width: 100%;
     width: 940px;
     height: 366px;
-    margin: auto;
     border-radius: 30px;
     display: flex;
-    padding: 8px;
 }
 
-.cabeca div {
+.BackgroundChef div {
     width: 316px;
     margin: 117px 248px 211px 60px;
-  }
+}
+
+
+.BackgroundChef-content h1 {
+    white-space: nowrap;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.BackgroundChef-content p {
+    max-width: 316px;
+    font-size: 18px;
+    line-height: 28px;
+}
   
-.cabeca img {
+.BackgroundChef img {
     width: 216px;
     height: 300px;
     margin: 66px 100px 0 0;
 }
 
+
 .maisAcessadas h2 {
     color: black;
-    display: inline-block;
-    margin-bottom: 30px;
-}
-
-.maisAcessadas img {
-    width: 100px;
-    margin: -30px 30px;
 }
 
 .cabeca h1 {
@@ -206,11 +212,6 @@ iframe {
     font-size: 18px;
 }
 
-/* 
-.card_image {
-    align-items: center;
-    width: 200px;
-} */
 
 .hidden {
     display: none;
