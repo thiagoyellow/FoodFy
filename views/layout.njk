@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="/styles.css">
 
     <nav>
-        <img src="/assets/logo.png" alt="Logo">
+        <a href="/">
+            <img src="/assets/logo.png" alt="Logo">
+        </a>
+
         <a href="/about">Sobre</a>
         <a href="/recipes">Receitas</a>
     </nav>
@@ -16,8 +19,10 @@
     {% block content %} {% endblock %}
 
 
-    <section class="cards">
-       
+    
+    {% block mostaccessed %} {% endblock %} 
+    
+    <section class="cards"> 
         {% for item in items %}
             <div class="card" id="{{item.id}}">
                 <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/{{item.image}}" alt="Imagem de {{item.title}}">
@@ -32,7 +37,7 @@
     <script src="/scripts.js"></script>
 
     <div class="footer">
-            <h2> Todos os créditos reservados, receitas Foodfy </h2>  
+            Todos os créditos reservados, receitas Foodfy  
     </div>
 </body>
 </html>

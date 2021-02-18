@@ -3,13 +3,12 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
 }
 
 body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
-  
+
     height: 100vh; /* deixa o body com a altura toda da tela */
     display: flex;
     flex-direction: column;
@@ -26,23 +25,25 @@ body {
 nav {
     max-width: 100%;
     width: 940px;
-    height: 32px;
-    padding: 10px;
-    margin: 36px auto 30px auto;
+    height: 33px;
+    padding: 0;
+    margin: 36px 2px;
     display: flex;
+    align-items: center;
+
 }
 
 nav img {
-    margin-right: 100px;
+    margin-right: 122px;
     padding: 0px;
-    width: 91px;
-    height: 27px;
+    width: 90.6px;
+    height: 26.9px;
 }
 
 nav a {
     text-decoration: none;
     margin-left: 30px;
-    font-size: 22px;
+    font-size: 16px;
     color: black;
 }
 
@@ -52,30 +53,9 @@ nav a:hover {
     transition: 800ms;
 }
 
-.sobre {
-    margin: 0 auto;
-}
-
-
-.sobre h2 {
-    font-weight: bold;
-    padding-top: 65px;
-    color: black;
-}
-
-.sobre p {
-    padding-bottom: 15px;
-    margin-top: 10px;
-    width: 940px;
-    height: 280px;
-    opacity: 100%;
-    font-size: 22px;
-
-    color: #444444;
-    line-height: 28px;
-}
 
 .BackgroundChef {
+    margin-bottom: 36px;
     background-color: #FBDFDB;
     max-width: 100%;
     width: 940px;
@@ -88,7 +68,6 @@ nav a:hover {
     width: 316px;
     margin: 117px 248px 211px 60px;
 }
-
 
 .BackgroundChef-content h1 {
     white-space: nowrap;
@@ -108,11 +87,6 @@ nav a:hover {
     margin: 66px 100px 0 0;
 }
 
-
-.maisAcessadas h2 {
-    color: black;
-}
-
 .cabeca h1 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -123,25 +97,37 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+.MostAccessed {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* CARDS */
+
 .cards {
     min-width: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    padding: 17px;
-    margin-bottom: 100px;
-}
-
-.card{
-    padding: 15px;
-    margin-top: 20px;
+    padding: 17px;  
 }
 
 .card img {
-    width: 400px;
-    height: 200px;
-    margin-top: 8px;
+    width: 300px;
+    height: 140px;
+    margin-top: 38px;
+    margin-right: 20px;
     border-radius: 15px;
+}
+
+.card h1 {
+    font-size: 18px;
+    color:Black;
+}
+
+.card h3 {
+    color: #777777;
+    font-size: 14px;
 }
 
 .recipe img {
@@ -151,39 +137,40 @@ nav a:hover {
     border-radius: 15px;
 }
 
-.card h1 {
-    color:Black;
-}
+/* FOOTER */
 
-.card h3 {
-    color: #777777;
-    font-size: 24px;
-}
-
-.footer h2 {
-    background-color: #EEEEEE ;
-    font-size: 26px;
+.footer {
+    position: relative;
+    bottom:0;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 50px;
+    background-color: #EEEEEE;
+    font-size: 14px;
     color: #999999;
+    text-align: center
 }
 
-/* MODAL ATIVO */
+/* --- ABOUT ---  */
 
-iframe {
-    width: 98%;
-    height: 90%;
-    margin: 20px;
-    position: absolute;
-    top: 5%;
+.sobre h2 {
+    font-size: 24px;
+    color: black;
+}
+
+.sobre p {
+    padding-bottom: 15px;
+    margin-top: 10px;
+    width: 940px;
+    height: 280px;
+    opacity: 100%;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
 }
 
 
 /*  === Recipe Page === */
-
-.recipe {
-    margin: 0 auto;
-    max-width: 800px;
-
-}
 
 .card_recipe_container {
     position: relative;
