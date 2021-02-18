@@ -109,7 +109,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
-    padding: 17px;  
+    padding: 17px;
 }
 
 .card img {
@@ -118,6 +118,7 @@ nav a:hover {
     margin-top: 38px;
     margin-right: 20px;
     border-radius: 15px;
+    cursor: pointer;  
 }
 
 .card h1 {
@@ -172,10 +173,10 @@ nav a:hover {
 
 /*  === Recipe Page === */
 
-.card_recipe_container {
-    position: relative;
-    padding-top: 65%;
-}
+.recipe {
+    margin: 0 auto;
+    max-width: 800px;
+} 
 
 .card_info h1{
     font-size: 25px;

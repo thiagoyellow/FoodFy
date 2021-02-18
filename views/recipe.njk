@@ -1,12 +1,13 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <title>Receita {{item.title}}</title>
+    <title>{{item.title}}</title>
 {% endblock %}
 
 {% block content %}
     <section class="recipe">
         <div class="recipe" id="{{item.id}}">
+            
             <div class="image_recipe">
                 <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/{{item.image}}" alt="Imagem de {{item.title}}">
             </div>
@@ -18,21 +19,21 @@
 
             <div class="card_content">
 
-            <h1>Ingredientes: </h1> <input id="bma" type="button" value="Mostrar" onClick="mostra('ma')">
-            <div id="ma" class="hidden" >
-                <p>{{item.ingredients}}</p>
-            </div>               
-            
-            
-            <h1> Preparo: </h1> <input id="bmb" type="button" value="Mostrar" onClick="mostra('mb')">
-            <div id="mb" class="hidden">     
+                <button type="button" onclick="Mudarestado('minhaDiv')">Mostrar / Esconder</button>
+                <h1>Ingredientes: </h1>
+                <div id="minhaDiv">
+                    <p>{{item.ingredients}}</p>
+                </div>
+                
+
+                <h1> Preparo: </h1>
                 <p>{{item.preparation}}</p>
-            </div>
-            
-            <h1> Informações: </h1> <input id="bmc" type="button" value="Mostrar" onClick="mostra('mc')">
-            <div id="mc" class="hidden"> 
+
+
+                <h1> Informações: </h1>
                 <p>{{item.information}}</p>
-            </div>
+
+            
             </div>
         </div>
     </section>
