@@ -19,19 +19,21 @@
 
             <div class="card_content">
 
-                <button type="button" onclick="Mudarestado('minhaDiv')">Mostrar / Esconder</button>
-                <h1>Ingredientes: </h1>
-                <div id="minhaDiv">
-                    <p>{{item.ingredients}}</p>
-                </div>
+                <h1>Ingredientes: <button type="button" onclick="Mudarestado('minhaDiv')"> Mostrar / Esconder</button> </h1> 
+                    <div id="minhaDiv">
+                        <li>{{item.ingredients}}</li>
+                    </div>
                 
 
-                <h1> Preparo: </h1>
-                <p>{{item.preparation}}</p>
+                <h1> Preparo: <button type="button" onclick="Mudarestado('minhaDiv2')"> Mostrar / Esconder</button> </h1>
+                    <div id="minhaDiv2">
+                        <p>{{item.preparation}}</p>
+                    </div>
 
-
-                <h1> Informações: </h1>
-                <p>{{item.information}}</p>
+                <h1> Informacoes: <button type="button" onclick="Mudarestado('minhaDiv3')"> Mostrar / Esconder</button> </h1>
+                    <div id="minhaDiv3">
+                        <p>{{item.information}}</p>
+                    </div>
 
             
             </div>

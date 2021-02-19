@@ -200,6 +200,15 @@ nav a:hover {
     font-size: 18px;
 }
 
+.card_content button {
+    font-size: 12px;
+    padding: 2px 2px;
+}
+
+.card_content button:hover {
+    background: rgb(222, 184, 135);
+}
+
 
 .hidden {
     display: none;
