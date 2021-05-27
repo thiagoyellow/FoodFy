@@ -28,7 +28,6 @@ server.get("/recipes", function(req, res) {
 
 server.get("/recipe", function(req, res) {
     const id = req.query.id
-    
     const recipe = recipes.find(function(recipe){
         return recipe.id == id
     })
@@ -40,6 +39,10 @@ server.get("/recipe", function(req, res) {
     return res.render("recipe", { item: recipe })
 
 })
+
+server.use(function (req, res) {
+    res.status(404).render("not-found");
+});
 
 server.listen(5000, function() {
     console.log("server is running")
