@@ -30,22 +30,21 @@ nav {
     margin: 36px 2px;
     display: flex;
     align-items: center;
-
-}
-
-nav img {
-    margin-right: 122px;
-    padding: 0px;
-    width: 90.6px;
-    height: 26.9px;
 }
 
 nav a {
     text-decoration: none;
-    margin-left: 30px;
     font-size: 16px;
     color: black;
+<<<<<<< HEAD
     position: relative;
+=======
+    margin-right: 30px;
+}
+
+nav a:nth-child(2) {
+    margin-left: 122.4px;
+>>>>>>> 6844e2d9959b28caf3a8f5d85bfc1da795fdf87d
 }
 
 nav a.active {
@@ -71,6 +70,8 @@ nav a:hover::after {
     width: 100%;
     transition: width 400ms ease-in-out;
 }
+
+
 
 
 .BackgroundChef {
@@ -129,6 +130,7 @@ nav a:hover::after {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     padding: 17px;
+    margin-left: 32px;
 }
 
 .card img {
@@ -242,3 +244,4 @@ input {
     padding: 5px 8px;
     display: block;
 }
+
