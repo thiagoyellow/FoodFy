@@ -1,8 +1,16 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
 
+:root {
+    --primary-color: #FBDFDB;
+}
+
 * {
     margin: 0;
     padding: 0;
+    border: none;
+
+    text-decoration: none;
+    list-style-type: none;
     border: none;
 }
 
@@ -14,61 +22,66 @@ body {
     align-items: center; 
 }
 
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 940px;
+}
+
+/* HEADER */
+
 header {
     background-color: white;
     width: 100%;
-    padding: 32px;
+    padding: 32px 0;
     text-align: center;
 }
 
-nav {
-    font-size: 22px;
-    max-width: 100%;
-    width: 940px;
-    height: 33px;
-    padding: 0;
-    margin: 36px 2px;
+header div.container {
+    display: grid;
+    grid-template-columns: 220px auto 280px;
+    align-items: center;
+    grid-gap: 24px;
+}
+
+header div.container a {
+    justify-self: start;
+}
+
+/* Header Search */
+
+.search input {
+    background-color: var(--primary-color);
+    width: 70%;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+/* Primary menu */
+
+nav.primary ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.primary ul li a {
+    margin-right: 12px;
+    color: black;
     display: flex;
     align-items: center;
 }
 
-nav a {
-    text-decoration: none;
-    font-size: 16px;
-    color: black;
-<<<<<<< HEAD
-    position: relative;
-=======
-    margin-right: 30px;
-}
-
-nav a:nth-child(2) {
-    margin-left: 122.4px;
->>>>>>> 6844e2d9959b28caf3a8f5d85bfc1da795fdf87d
-}
-
-nav a.active {
+nav.primary ul li a.active {
     font-weight: bold;
-    color:#d16d5e
+    color: #da721db0;
 }
 
-nav a:hover {
-    color: red;
+nav.primary ul li a:hover {
+    color: rgb(255, 72, 0);
 }
 
-nav a::after {
-    content:"";
-    width: 0;
-    height: 2px;
-    background-color: red;
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-}
-
-nav a:hover::after {
-    width: 100%;
-    transition: width 400ms ease-in-out;
+nav.primary ul li a i {
+    margin: 0 4px;
 }
 
 

@@ -1,0 +1,59 @@
+<script src="/scripts.js"></script>
+
+<header>   
+   <div class="container">
+        <a href="/">
+            <div class="logo">
+                <img src="/assets/logo.png">
+            </div>
+        </a>
+        <nav class="primary">
+        <ul>
+            <li>
+                <a href="/" class="active">
+                    <i class="material-icons">home</i>
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="/about">
+                    <i class="material-icons">info</i>
+                    Sobre
+                </a>
+            </li>
+            <li>
+                <a href="/recipes">
+                    <i class="material-icons">restaurant</i>
+                    Receitas
+                </a>
+            </li>
+            <li>
+                <a href="/chefs">
+                    <i class="material-icons">person</i>
+                    Chefs
+                </a>
+            </li>
+            <li>
+                <a href="/admin">
+                    <i class="material-icons">login</i>
+                    Admin
+                </a>
+            </li>
+        </ul>
+        </nav>
+        
+
+        <form class="search" method="get" action="/recipes/search">
+            <input 
+                type="text"
+                name="filter"
+                placeholder="Buscar por receita"
+                {% if search.term %}
+                    value={{search.term}}
+                {% endif %}
+            >
+        </form>
+
+
+    </div>
+</header>
