@@ -1,6 +1,6 @@
 const express = require('express')
 const routes = express.Router()
-
+const RecipeController = require('./app/controllers/RecipeController')
 const server = express()
 const recipes = require("../data")
 
@@ -31,6 +31,12 @@ routes.get('/recipes', function(req, res) {
 
 routes.get('/admin', function(req, res) {
   return res.render("admin/index")
+})
+
+routes.get('/recipes/create', RecipeController.create)
+
+routes.get('/ads/create', function(req, res) {
+  return res.render("recipes/create")
 })
 
 routes.use(function (req, res) {
