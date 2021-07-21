@@ -28,6 +28,31 @@ body {
     max-width: 940px;
 }
 
+.button {
+    background-color: var(--primary-color);
+    color: white;
+
+    display: block;
+    margin: 16px 0;
+
+    padding: 12px 16px;
+
+    border-radius: 4px;
+
+    /* para colocar o botao para baixo */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.button:hover {
+    background-color: #c4958d
+}
+
 /* HEADER */
 
 header {
@@ -264,18 +289,17 @@ input {
     width: 360px;
     padding: 2% 0 0;
     margin: auto;
-  }
-  .form {
+}
+.form {
     position: relative;
     z-index: 1;
     background: #FFFFFF;
     max-width: 360px;
     margin: 0 auto 100px;
     padding: 45px;
-    text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  }
-  .form input {
+}
+.form input {
     font-family: "Roboto", sans-serif;
     outline: 0;
     background: #f2f2f2;
@@ -285,36 +309,118 @@ input {
     padding: 15px;
     box-sizing: border-box;
     font-size: 14px;
-  }
-  .form button {
+}
+
+.form button {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
-    outline: 0;
     background: #da721db0;
-    width: 100%;
+    width: 40%;
     border: 0;
     padding: 15px;
     color: #FFFFFF;
     font-size: 14px ;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
     cursor: pointer;
-  }
+}
 
-  .form button:hover,.form button:active,.form button:focus {
+.form button:hover,.form button:active,.form button:focus {
     background: var(--primary-color);
-  }
+}
 
-  .form .message {
+.form .message {
     margin: 15px 0 0;
     color: #b3b3b3;
     font-size: 12px;
-  }
-  .form .message a {
+}
+.form .message a {
     color: #4CAF50;
     text-decoration: none;
-  }
-  .form .register-form {
+}
+.form .register-form {
     display: none;
-  }
+}
+
+
+  /* PRODUCT FORM */
+
+section.form {
+    background-color: white;
+
+    padding: 32px 24px;
+    margin: 32px auto;
+
+    box-shadow: 2px 2px 2px -4px rgba(60, 60, 60, .9);
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    max-width: 700px;
+    width:90%
+}
+
+section.form .header h3 {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+
+    font-weight: bold;
+    color: #dfa096;
+
+    margin-bottom: 16px;
+}
+
+form .item {
+    margin-bottom: 16px;
+
+}
+
+form .item > div:nth-child(1) {
+    color: #777;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+form .item input[type="text"],
+form .item input[type="number"],
+form .item textarea,
+form .item select {
+    width: 100%;
+
+    padding: 8px 16px;
+
+    box-shadow: 2px 2px 2px -4px rgba(63, 63, 63, .9);
+
+    border: 1px solid #efefef;
+    border-radius: 4px;
+
+    font-size: 16px;
+}
+
+form .item select {
+    /* permitir estilizacao no select */
+-moz-appearance: none;
+-webkit-appearance: none;
+appearance: none;
+
+/* trazer de volta o icone lateral */
+background-color: #fff;
+background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+background-repeat: no-repeat;
+background-position: right .7em top 50%, 0 0;
+background-size: .65em auto, 100%;
+
+}
+
+form .item textarea {
+width: 95%;
+min-height: 150px;
+}
+
+form .fields {
+    margin-bottom: 64px;
+}
+
   

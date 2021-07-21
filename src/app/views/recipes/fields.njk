@@ -65,7 +65,11 @@
     <div id="ingredients">
         {% if not recipe.ingredients %}
         <div class="ingredient">
-            <input type="text" name="ingredients[]" >
+            <input 
+            type="text" 
+            name="ingredients[]"
+            placeholder="Adicione um ingrediente por vez" 
+            >
         </div>
         {% else %}
         {% for ingredient in recipe.ingredients %}
@@ -83,12 +87,16 @@
 <div id="steps">
     {% if not recipe.preparation %}
     <div class="step">
-        <input type="text" name="preparation[]" >
+        <input 
+        type="text" 
+        name="preparation[]" 
+        placeholder="Adicione um passo por vez"
+        >
     </div>
     {% else %}
     {% for preparation in recipe.preparation %}
         <div class="step">
-        <input type="text" name="preparation[]" value="{{preparation}}" >
+        <input type="text" name="preparation[]" value="{{preparation}}">
         </div>
     {% endfor %}
     {% endif %}
@@ -105,3 +113,4 @@
 </section>
 
 <input type="hidden" name="user_id" value={{session.userId}}>
+
