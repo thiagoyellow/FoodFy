@@ -34,7 +34,9 @@ routes.get('/admin', function(req, res) {
 })
 
 routes.get('/recipes/create', RecipeController.create)
+routes.post('/recipes', RecipeController.post)
 
+//Alias
 routes.get('/ads/create', function(req, res) {
   return res.render("recipes/create")
 })

@@ -29,7 +29,7 @@ body {
 }
 
 .button {
-    background-color: var(--primary-color);
+    background-color: #da721db0;
     color: white;
 
     display: block;
@@ -50,7 +50,9 @@ body {
 }
 
 .button:hover {
-    background-color: #c4958d
+    background-color: #ffffff;
+    color: #da721db0;
+    border: 1px solid #da721db0;
 }
 
 /* HEADER */
