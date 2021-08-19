@@ -48,26 +48,15 @@ CREATE TABLE "users" (
 );
 
 -- foreign key
-ALTER TABLE "chefs" 
-DROP CONSTRAINT chefs_file_id_fkey,
-ADD CONSTRAINT chefs_file_id_fkey
-FOREIGN KEY ("file_id")
-REFERENCES "files" ("id")
-ON DELETE CASCADE;
+ALTER TABLE "chefs" DROP CONSTRAINT chefs_file_id_fkey,
+ADD CONSTRAINT chefs_file_id_fkey FOREIGN KEY ("file_id") REFERENCES "files" ("id") ON DELETE CASCADE;
 
 ALTER TABLE "recipe_files" 
-DROP CONSTRAINT IF EXISTS recipe_files_recipe_id_fkey,
-ADD CONSTRAINT recipe_files_recipe_id_fkey 
-FOREIGN KEY ("recipe_id") 
-REFERENCES "recipes" ("id") 
-ON DELETE CASCADE;
+DROP CONSTRAINT IF EXISTS recipe_files_recipe_id_fkey, ADD CONSTRAINT recipe_files_recipe_id_fkey 
+FOREIGN KEY ("recipe_id") REFERENCES "recipes" ("id") ON DELETE CASCADE;
 
-ALTER TABLE "recipe_files" 
-DROP CONSTRAINT IF EXISTS recipe_files_file_id_fkey,
-ADD CONSTRAINT recipe_files_file_id_fkey 
-FOREIGN KEY ("file_id") 
-REFERENCES "files" ("id") 
-ON DELETE CASCADE;
+ALTER TABLE "recipe_files" DROP CONSTRAINT IF EXISTS recipe_files_file_id_fkey,
+ADD CONSTRAINT recipe_files_file_id_fkey FOREIGN KEY ("file_id") REFERENCES "files" ("id") ON DELETE CASCADE;
 
 -- create procedure
 CREATE FUNCTION trigger_set_timestamp()
