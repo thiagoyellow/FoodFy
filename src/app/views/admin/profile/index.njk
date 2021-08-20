@@ -7,11 +7,18 @@
 {% block content %}
     <section class='container users-container'>
         <div class='upper-wrapper'>
-            <h1>Bem vindo {{user.name}}</h1>
-
-            <form method='POST' action='/admin/profile?_method=PUT'>
-                <button class='button' type='submit'>Salvar</button>
+            <h1>Bem vindo {{user.name}}  👩🏻‍🍳🍳  </h1>
         </div>
+
+        <div>
+            <h3>O que você quer fazer hoje? </h3>
+            <a class="profiledit" href='/admin/recipes/create'><img src="/assets/CriarReceita.jpg" alt=""> </p> Criar uma receita</a>
+            <a class="profiledit" href='/admin/profile/{{user.id}}/edit'><img src="/assets/CadastroEditar.png" alt=""> </p> Atualizar cadastro</a>   
+        </div>
+
+
+        {# <form method='POST' action='/admin/profile?_method=PUT'>
+                <button class='button' type='submit'>Salvar</button>
 
             <div class='fields'>
                 {% include 'admin/profile/profile-fields.njk' %}
@@ -22,6 +29,6 @@
                 name='id' 
                 value={{user.id}}
             >
-        </form>   
+        </form>    #}
     </section>
 {% endblock %}

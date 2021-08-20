@@ -71,11 +71,10 @@ module.exports = {
     async delete(req, res, next) {
         try {
             const chef = await LoadChefService.load('chef', req.body.id )
-            const recipes = await LoadChefService.load('chefRecipes', req.params.id)
-
-            if (recipes.length != 0 ) {
-                return res.render('admin/chefs/edit', {
-                    chef: req.body,
+         
+            if (chef.total_recipes >= 1 ) {
+                return res.render(`admin/chefs/edit`, {
+                    chef,
                     error: 'O Chef possui receitas cadastradas e não pode ser deletado. Remova-as primeiro!'
                 })
             }
