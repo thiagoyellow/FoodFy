@@ -100,3 +100,8 @@ textarea {
     font-weight: normal;
     color: var(--color-secondary);
 }
+
+.links i {
+    font-size: 15px;
+    margin-right: 5px;
+}

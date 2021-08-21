@@ -29,11 +29,14 @@ body {
 }
 
 .header-home .filter-form .input {
-    width: 100%;
+    width: 80%;
 }
 
 .header-home .filter-form .input input {
     padding: 10px;
+    background-color:rgb(240, 238, 233);
+    border: 1px solid gray;
+    border-radius: 10px;
 }
 
 footer {

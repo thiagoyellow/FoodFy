@@ -9,8 +9,9 @@ module.exports = {
         req.session.error = ''
         req.session.success = ''
 
-        return res.render('admin/session/login', { error, success })
+        return res.render('admin/session/login', { user, error, success })
     },
+
     async login(req, res) {
         try {
             req.session.userId = req.user.id
@@ -24,11 +25,13 @@ module.exports = {
             })
         }
     },
+
     logout(req, res) {
         req.session.destroy()
 
         return res.redirect('/login')
     },
+
     forgotForm(req, res) {
         req.session.destroy()
 
@@ -38,9 +41,11 @@ module.exports = {
 
         return res.render('admin/session/password-forgot', { error, success  })
     },
+
     resetForm(req, res) {
         return res.render('admin/session/password-reset', { token: req.query.token })
     },
+
     async forgot(req, res) {
         try{
             const user = req.user
@@ -78,6 +83,7 @@ module.exports = {
             })
         }
     },
+    
     async reset(req, res) {
         try{
             const user  = req.user
