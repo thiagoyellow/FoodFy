@@ -23,19 +23,27 @@ module.exports = {
             await mailer.sendMail({
                 to: req.body.email,
                 from: 'no-reply@foodfy.com.br',
-                subject: 'Acessar o sistema',
-                html: `<h2>Olá ${req.body.name},</h2>
-                <p>Sua conta foi criada com sucesso!
-                <br/><br/>
-                Sua senha é: ${password}
-                <br/><br/>
-                Clique no link abaixo para acessar sua conta:</p>
+                subject: 'Acessar o sistema', 
+                html: `<h2 style="font-size: 24px; font-weight: normal;">Olá <strong>${req.body.name}</strong>,</h2>
+                <p>Seja muito bem-vindo(a) ao <strong>Foodfy</strong> :)</p>
+                <p>Seu cadastro foi realizado com sucesso! Confira seus dados:</p>
+                <p>Login: ${req.body.email}</p>
+                <p>Senha: ${password}</p>
+                <br>
+                <h3>Como eu acesso minha Conta?</h3>
                 <p>
-                    <a href='http://localhost:3000/login' target='_blank'>
-                        ACESSAR A CONTA
-                    </a>
-                </p>
-                `,
+                    Bem simples, você só precisa clicar no botão abaixo e entrar com seu email e senha informados acima.
+				</p>
+				<p style="text-align: center;">
+                    <a
+                        style="display: block; margin: 32px auto; padding: 16px; width:150px; color: #fff;
+                        background-color: #6558C3; text-decoration: none; border-radius: 4px;"
+                        href="http://localhost:3000/login" target="_blank"
+                    >Acessar</a> 
+				</p>
+                <p style="padding-top:16px; border-top: 2px solid #ccc">Te esperamos lá!</p>
+                <p>Equipe Foodfy.</p>
+            `,
             })
 
             req.session.success = 'Conta criada com sucesso.'
