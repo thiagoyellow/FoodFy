@@ -15,6 +15,7 @@ module.exports = {
             })
         }
     },
+
     async put(req, res) {
         try {
             await User.update(req.body.id, {

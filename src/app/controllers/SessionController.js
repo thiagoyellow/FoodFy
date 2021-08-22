@@ -9,15 +9,15 @@ module.exports = {
         req.session.error = ''
         req.session.success = ''
 
-        return res.render('admin/session/login', { user, error, success })
+        return res.render('admin/session/login', { error, success })
     },
 
     async login(req, res) {
         try {
             req.session.userId = req.user.id
             req.session.admin = req.user.is_admin
-            
             return res.redirect(`/admin/profile/${req.session.userId}`)
+        
         } catch (error) {
             console.log(error)
             return res.render('admin/profile/index', {
@@ -28,18 +28,12 @@ module.exports = {
 
     logout(req, res) {
         req.session.destroy()
-
         return res.redirect('/login')
     },
 
     forgotForm(req, res) {
         req.session.destroy()
-
-        const { error, success } = req.session
-        req.session.error = ''
-        req.session.success = ''
-
-        return res.render('admin/session/password-forgot', { error, success  })
+        return res.render('admin/session/password-forgot')
     },
 
     resetForm(req, res) {
@@ -63,8 +57,9 @@ module.exports = {
             await mailer.sendMail({
                 to: user.email,
                 from: 'no-reply@foodfy.com.br',
-                subject: 'Recuperação de senha',
-                html: `<h2>Esqueceu sua senha?</h2>
+                subject: 'Foodfy: Recuperação de senha',
+                html: `<h3>Equipe Foodfy:</h3>
+                <h2>Esqueceu sua senha?</h2>
                 <p>Não se preocupe, clique no link abaixo para recuperar sua senha</p>
                 <p>
                     <a href='http://localhost:3000/password-reset?token=${token}' target='_blank'>
@@ -73,16 +68,23 @@ module.exports = {
                 </p>
                 `,
             })
-            
-            req.session.success = 'Cheque seu email para resetar sua senha.'
-            return res.redirect('/password-forgot')
-        }catch(error) {
-            console.log(error)
+
             return res.render('admin/session/password-forgot', {
-                error: 'Algo deu errado.'
-            })
-        }
-    },
+                success: 'Verifique seu email para resetar a senha.',
+    
+              })
+
+             
+        
+            } catch (err) {
+              console.error(err)
+              return res.render('admin/session/password-forgot', {
+                error: 'Erro inesperado, tente novamente.',
+              })
+            }
+          },
+            
+           
     
     async reset(req, res) {
         try{

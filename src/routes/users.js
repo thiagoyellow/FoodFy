@@ -23,6 +23,7 @@ routes.post('/password-reset', SessionValidator.reset, SessionController.reset)
 routes.get('/admin/profile/:id', ProfileValidator.show, UserValidator.show, ProfileController.index) 
 routes.put('/admin/profile', ProfileValidator.put, ProfileController.put)
 
+
 routes.get('/admin/users/register', onlyAdmin, UserController.registerForm)
 routes.get('/admin/users', UserController.list)
 routes.get('/admin/users/:id', onlyAdmin, UserValidator.show, UserController.show)
