@@ -1,6 +1,7 @@
+
 .users-container .users {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 50px;
 }
 
@@ -50,6 +51,21 @@
 .users-container .fields {
     max-width: 940px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    border: 1px solid rgb(126, 120, 120);
+    border-radius: 20px;
+    padding: 25px 35px;
+}
+
+.teste{
+    display:flex;
+}
+
+.teste a {
+    margin-top: 80px;
+}
+
+.teste button {
+    margin-top: 8px;
 }

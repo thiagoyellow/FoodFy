@@ -9,12 +9,27 @@
         <div class='upper-wrapper'>
             <h1>Bem vindo {{user.name}}  👩🏻‍🍳🍳  </h1>
         </div>
-
-        <div>
+            
             <h3>O que você quer fazer hoje? </h3>
-            <a class="profiledit" href='/admin/recipes/create'><img src="/assets/CriarReceita.jpg" alt=""> </p> Criar uma receita</a>
-            <a class="profiledit" href='/admin/profile/edit'><img src="/assets/CadastroEditar.jpg" alt=""> </p> Atualizar cadastro</a>   
-        </div>
 
+        <div class="teste">
+            <a class="profiledit" href='/admin/recipes/create'><img src="/assets/CriarReceita.jpg" alt=""> </p> Criar uma receita</a>
+            {# <a class="profiledit" href='/admin/profile/edit'><img src="/assets/CadastroEditar.jpg" alt=""> </p> Atualizar cadastro</a>    #}
+            
+            <form method='POST' action='/admin/profile?_method=PUT'>
+
+                <div class='fields'>
+                    <h3>Alterar dados cadastrais<h3>
+                    {% include 'admin/profile/profile-fields.njk' %}
+                    <button class='button' type='submit'>Salvar</button>
+                </div>
+        
+                <input 
+                    type='hidden' 
+                    name='id' 
+                    value={{user.id}}
+                >
+            </form>   
+        </div>
     </section>
 {% endblock %}
