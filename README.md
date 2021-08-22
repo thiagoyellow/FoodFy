@@ -95,7 +95,7 @@ $ cd foodfy
 $ npm install
 
 # Crie o banco de dados e as tabelas utilizando os comandos
-# inclusos no arquivo "foodfy.sql".
+# inclusos no arquivo "database.sql".
     
 # Conexão com o banco de dados:
 # Abra e edite o arquivo "db.js" dentro da pasta "src/config"
