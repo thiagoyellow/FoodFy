@@ -114,7 +114,7 @@ $ npm start
 
 ### Acessando a Área Administrativa
 
-Selecione um email da tabela users, acesse a tela de login e entre utilizando o mesmo com a senha "rocketseat" (senha padrão).
+Selecione um email da tabela users, acesse a tela de login e entre utilizando o mesmo com a senha `rocketseat` (senha padrão).
 
 <br>
 
